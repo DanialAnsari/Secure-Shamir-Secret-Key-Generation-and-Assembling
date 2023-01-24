@@ -54,6 +54,7 @@ decryptPrivateKeyForShare = (encrypted,password) => {
 
   async function transferToken(privateKey,amount,recipient){
 
+    try{
     const provider = new ethers.providers.JsonRpcProvider("https://mainnet.infura.io/v3/1bd40ac2693f48159476e5b426280f6a");
 
   // Create a wallet object from the private key
@@ -69,6 +70,9 @@ decryptPrivateKeyForShare = (encrypted,password) => {
     await tx.wait();
 
     console.log(`Sent ${amount} USDT to ${recipient}`);
-
+    }
+    catch(e){
+      console.log(e)
+    }
 }
   assembleKeys()
