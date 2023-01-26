@@ -18,7 +18,7 @@ async function generateEncryptedShares(){
     console.log(share3,'\n')
   }
   catch(e){
-    console.log("Error, please make sure inputs were entered correctly")
+    console.log(e,"Error, please make sure inputs were entered correctly")
   }
 }
 

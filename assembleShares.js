@@ -24,7 +24,7 @@ async function assembleKeys(){
     }
   }
   catch(e){
-    console.log("Error, please make sure inputs were entered correctly")
+    console.log(e,"Error, please make sure inputs were entered correctly")
   }
     
 }
